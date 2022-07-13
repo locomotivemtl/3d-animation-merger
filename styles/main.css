@@ -1,0 +1,141 @@
+@import "reset.css";
+
+:root {			
+	--aside-width: 480px;				
+}
+
+body {
+	color: #969fbf;
+	background-color: #2a2a35;
+	font-family:  Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+}
+
+button {			    
+    display: inline-block; 
+    overflow: visible;
+    margin: 0; 
+    padding: 0;
+    outline: 0;
+    border: 0;
+    background: none transparent;
+    color: inherit;
+    vertical-align: middle; 
+    text-align: center; 
+    text-decoration: none;
+    text-transform: none;
+    font: inherit; 
+    line-height: normal;
+    cursor: pointer;
+    user-select: none;
+}
+
+input[type="file"] {
+	font-size: .75em;
+}
+
+input[type="file"]:hover::-webkit-file-upload-button {
+	background-color: rgba(0,0,0,0.1);
+	color:  chartreuse;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+	background-color: transparent;
+	border: 1px solid;
+	color: currentColor;
+	margin-right: 1em;				
+}
+
+main {
+	display: flex;
+	height: 100vh;
+}
+
+.viewer {
+	position: relative;
+	flex-grow: 1;
+}
+
+.viewer canvas {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.viewer_ui {
+	position: absolute;
+	top: 0;left: 0;
+	z-index: 10;
+	background-color: rgba(255,255,255, 0.1);
+	color: rgba(255,255,255,0.5);
+	font-size: 12px;
+}
+
+.viewer_ui button {
+	padding: 5px;
+}
+
+.aside {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 0;
+	flex-basis: var(--aside-width);
+	flex-shrink: 0;
+}
+
+.animations {
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+	flex-grow: 1;
+	background-color: rgba(0,0,0,0.2);				
+}
+
+.animations input {
+	background-color: transparent;
+	color:  currentColor;
+	border: none;	
+	padding: .25em 1em;			
+}
+
+.animations input:hover {
+	background-color: #969fbf1a;				
+}
+
+.animations input:focus {
+	background-color: #969fbf;
+	color:  #2a2a35;
+	outline:  0;
+}
+
+label {
+	display: flex;
+	flex-direction: column;
+	margin:  1em;
+}		
+
+label span {
+	margin-bottom: .25em;
+}	
+
+.actions {
+	display: flex;
+	height: 80px;
+}
+
+.actions button {
+	flex:  1;				
+}
+
+.button {
+	color: currentColor;
+	border: 1px solid;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.button:hover, .button:focus {
+	background-color: rgba(0,0,0,0.1);
+}
+
+.button.-primary {
+	color: chartreuse;
+} 

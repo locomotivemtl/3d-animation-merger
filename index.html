@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>locomotive - animation-merger</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%22.04em%22 y=%22.63em%22 font-size=%22140%22 fill=%22chartreuse%22>⚒︎</text></svg>">
+		<link rel="stylesheet" href="styles/main.css">		
+	</head>
+	<body>
+	    <main>
+	    	<div class="viewer" id="viewer">
+	    		<div class="viewer_ui">
+	    		    <button id="transform-mode-btn">Transform mode</button>
+	    		</div>
+	    		<canvas></canvas>
+	    	</div>
+
+	    	<aside class="aside">
+		        <div class="files">
+		            <label for=""> 
+		                <span>Source FBX</span>
+		                <input id="source" type="file" accept=".fbx" />
+		            </label>
+		            <label for="">
+		                <span>Animation FBX (multiple allowed)</span>
+		                <input id="source-animations" type="file" accept=".fbx" multiple />
+		            </label>
+		        </div>
+
+		        <div class="animations" id="animations-ui"></div>		       
+		        
+		        <div class="actions">
+		            <button class="button -primary" id="export-btn">Export GLB</button>
+		            <button class="button" onclick="window.location.reload()">Reset</button>
+		        </div>
+	        </aside>
+	    </main>	
+
+	    <script src="/bin/main.js"></script>	
+	</body> 
+</html>

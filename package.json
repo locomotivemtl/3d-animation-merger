@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "three": "^0.142.0"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-json-modules --no-warnings build/watch.js",
+    "build": "node --experimental-json-modules --no-warnings build/build.js"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "esbuild": "^0.14.49"
+  }
+}
